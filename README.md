@@ -48,6 +48,10 @@ res = model.invoke(file,ocr_mode = "plus", stream = False)
 ### Business cooperation or get a more powerful version
 - email: christnowx@qq.com
 
+### Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=anyforge/anyparse&type=Date)](https://www.star-history.com/#anyforge/anyparse&Date)
+
 ### Thanks
 - RapidOCR
 - Nanonets-OCR-s
