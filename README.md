@@ -20,6 +20,8 @@
 - Github：[AnyParse](https://github.com/anyforge/anyparse)
 - Hugging Face: [AnyParse](https://huggingface.co/anyforge/anyparse)
 - ModelScope: [AnyParse](https://www.modelscope.cn/models/anyforge/anyparse)
+- if need doc layout detect: [anydoclayout](https://github.com/anyforge/anydoclayout)
+- if need doc table detect: [anytable](https://github.com/anyforge/anytable)
 
 ## 1. Usage
 
