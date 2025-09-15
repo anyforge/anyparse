@@ -22,6 +22,9 @@
 - ModelScope: [AnyParse](https://www.modelscope.cn/models/anyforge/anyparse)
 
 ## 1. Usage
+
+- download models to "./resource/models": by ModelScope or Hugging Face
+
 ```python
 from anyparse.parser import AnyParse
 from anyparse.settings import Settings
