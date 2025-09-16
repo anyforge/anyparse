@@ -48,6 +48,14 @@ res = model.invoke(file,ocr_mode = "plus", stream = False)
 ### Business cooperation or get a more powerful version
 - email: christnowx@qq.com
 
+### Buy me a coffee
+
+- 微信(WeChat)
+
+<div align="left">
+    <img src="./zanshan.jpg" width="30%" height="30%">
+</div>
+
 ### Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=anyforge/anyparse&type=Date)](https://www.star-history.com/#anyforge/anyparse&Date)
