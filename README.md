@@ -34,6 +34,8 @@ from anyparse.settings import Settings
 args = Settings().model_dump() ## see Settings configs
 model = AnyParse(args)
 
+# docx,pptx,xlsx,csv,txt,md,html,jpg,png,pdf
+
 file = '1.pdf'
 
 res = model.invoke(file,ocr_mode = "base", stream = False)
