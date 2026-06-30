@@ -193,7 +193,7 @@ res = rq.post(url, files = files, data = args, headers = headers)
 print(res.json())
 ```
 
-**详细信息和文档请参见 [docs](./docs/README.md)**
+**详细信息和文档请参见 [docs](https://anyforge.github.io/anyparse/)**
 
 
 ## 感谢所有贡献者
