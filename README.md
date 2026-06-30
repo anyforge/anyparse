@@ -199,6 +199,10 @@ print(res.json())
 
 **Details and Documentation see [docs](https://anyforge.github.io/anyparse/)**
 
+## TODO LIST
+
+- audio transcription
+- video transcription
 
 ## All Thanks To Our Contributors
 
