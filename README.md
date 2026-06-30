@@ -197,7 +197,7 @@ print(res.json())
 
 ```
 
-**Details and Documentation see [docs](./docs/README.md)**
+**Details and Documentation see [docs](https://anyforge.github.io/anyparse/)**
 
 
 ## All Thanks To Our Contributors
