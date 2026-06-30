@@ -1,0 +1,107 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anyparse"
+dynamic = ["version"]
+license = "LicenseRef-AnyParse-Open-Source-License"
+license-files = ["LICENSE.md"]
+description = "Parse any file to Markdown and JSON"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+keywords = [
+    "anyparse",
+    "document-parsing",
+    "document-understanding",
+    "ocr",
+    "vlm",
+    "multimodal",
+    "image",
+    "pdf",
+    "markdown",
+    "docx",
+    "pptx",
+    "xlsx",
+    'tsv', 'csv',
+    'txt', 'md', 'rst',
+    'htm', 'html', 'xhtml', 'shtml',
+    'png', 'jpeg', 'jpg', 'webp',
+    'epub', 'ipynb', 'eml'
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "aiofiles",
+    "aiohttp",
+    "beautifulsoup4",
+    "chardet",
+    "defusedxml",
+    "docutils",
+    "clevercsv",
+    "httpx",
+    "loguru>=0.7.2",
+    "lxml",
+    "mammoth>=1.11.0,<2",
+    "markdownify",
+    "numpy>=1.21.6",
+    "openai>=1.70.0",
+    "opencv-python>=4.11.0.86",
+    "openpyxl>=3.1.5,<4",
+    "pandas",
+    "tabulate",
+    "Pillow>=10.0.0",
+    "pydantic",
+    "pydantic_core",
+    "typing-inspect",
+    "typing-inspection",
+    "typing_extensions",
+    "python-dotenv",
+    "pylatexenc",
+    "pypdfium2>=5.0.0",
+    "python-docx",
+    "python-pptx",
+    "pypptx-with-oxml>=1.0.3",
+    "PyYAML",
+    "Requests",
+    "rich",
+    "regex",
+    "slowapi",
+    "fastapi",
+    "sse_starlette",
+    "starlette",
+    "toml",
+    "typer",
+    "uvicorn",
+    "ujson",
+    "orjson",
+    "jinja2",
+    "python-multipart",
+    "accelerate>=1.5.1",
+    "modelscope>=1.26.0",
+    "transformers>5.0.0",
+    "torch>=2.6.0,<3",
+    "torchvision>=0.21.0,<1"
+]
+
+
+[project.urls]
+homepage = "https://github.com/anyforge/anyparse"
+
+
+[project.scripts]
+anyparse-cli = "anyparse.clis.main:anyparse_cli_main"
+
+[tool.setuptools.dynamic]
+version = { attr = "anyparse.__version__.version" }
+
+[tool.setuptools.packages.find]
+include = ["anyparse*"]
+namespaces = false
+
+[tool.setuptools]
+zip-safe = false

@@ -1,0 +1,129 @@
+site_name: AnyParse
+site_url: https://github.com/anyforge/anyparse
+repo_name: anyforge/anyparse
+repo_url: https://github.com/anyforge/anyparse
+
+theme:
+  logo: images/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - navigation.expand
+    - navigation.footer
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - toc.follow
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: anyforge/anyparse
+      name: GitHub
+    - icon: material/email
+      link: mailto:anyforge@163.com
+      name: E-mail
+
+copyright: Copyright (c) 2026 [AnyParse Team]. All rights reserved.
+
+nav:
+  - Home:
+    - "AnyParse": index.md
+    - Quick Start:
+      - Quick Start: quick_start/index.md
+    - Usage:
+      - Usage: usage/index.md
+      - Model Source: usage/model_source.md
+      - Python API: usage/python.md
+      - CLI Tools: usage/cli_tools.md
+      - API & OpenAI: usage/apis.md
+    - Reference:
+      - Reference: reference/index.md
+      - Changelog: reference/changelog.md
+    - FAQ:
+      - FAQ: faq/index.md
+  - Quick Start:
+    - Quick Start: quick_start/index.md
+  - Usage:
+    - Usage: usage/index.md
+    - Model Source: usage/model_source.md
+    - Python API: usage/python.md
+    - CLI Tools: usage/cli_tools.md
+    - API & OpenAI: usage/apis.md
+  - Reference:
+    - Reference: reference/index.md
+    - Changelog: reference/changelog.md
+  - FAQ:
+    - FAQ: faq/index.md
+
+plugins:
+  - search
+  - i18n:
+      reconfigure_material: true
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+          nav_translations:
+            Home: 主页
+            Quick Start: 快速入门
+            Usage: 使用指南
+            Model Source: 模型源配置
+            Python API: Python模块
+            CLI Tools: 命令行工具
+            API & OpenAI: 接口和OpenAI兼容
+            FAQ: 常见问题解答
+            Reference: 参考资料
+            Changelog: 更新日志
+  - mkdocs-video
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - gfm_admonition
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true

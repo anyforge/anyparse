@@ -15,128 +15,126 @@
 
 # AnyParse
 
-**AnyParse** is a powerful multimodal document parsing and understanding engine designed to seamlessly convert complex files into structured Markdown and JSON formats. Whether it's basic text processing, professional document conversion, or advanced Vision-Language Models (VLM) and OCR recognition, AnyParse provides a comprehensive, one-stop solution.
+**AnyParse** 是一个功能强大的多模态文档解析与理解引擎，旨在将复杂文件无缝转换为结构化的 Markdown 和 JSON 格式。无论是基础文本处理、专业文档转换，还是先进的视觉语言模型（VLM）和 OCR 识别，AnyParse 都能提供全面的一站式解决方案。
 
-### Core Capabilities
+### 核心能力
 
-- **Multimodal Document Understanding:** Supports cross-modal parsing of images and documents. By combining OCR and VLM technologies, it accurately extracts unstructured data.
-- **Comprehensive Format Coverage:** Easily parses office documents, web pages, spreadsheets, e-books, and emails with a single tool.
-- **Structured Output:** Transforms complex files into standardized Markdown and JSON, streamlining downstream data processing and Large Language Model (LLM) applications.
+- **多模态文档理解：** 支持图像与文档的跨模态解析，通过结合 OCR 和 VLM 技术，精准提取非结构化数据。
+- **全面格式覆盖：** 单一工具即可轻松解析办公文档、网页、电子表格、电子书和邮件。
+- **结构化输出：** 将复杂文件转换为标准化的 Markdown 和 JSON，简化下游数据处理和大语言模型（LLM）应用流程。
 
-### Key Features
+### 主要特性
 
-- **Documents & Layouts:** PDF, DOCX, PPTX, XLSX, EPUB, IPYNB
-- **Text & Markup:** TXT, MD, RST, HTML/XHTML/HTM/SHTML
-- **Spreadsheets & Data:** CSV, TSV
-- **Images & Multimedia:** PNG, JPEG/JPG
-- **Others:** EML (Emails)
-- **Built-in CLI, FastAPI**
-- **Supports running in a pure CPU environment, and also supports GPU**
-- Output text in human reading order, suitable for single-column, multi-column and complex layouts
-- Retain the original document structure, including titles, paragraphs, lists, etc.
-- Extract images, image descriptions, tables, table titles and footnotes
-- Automatically identify and convert formulas in documents to LaTeX format
-- Automatically identify and convert tables in documents to HTML format
+- **文档与布局：** PDF、DOCX、PPTX、XLSX、EPUB、IPYNB
+- **文本与标记：** TXT、MD、RST、HTML/XHTML/HTM/SHTML
+- **电子表格与数据：** CSV、TSV
+- **图像与多媒体：** PNG、JPEG/JPG
+- **其他：** EML（邮件）
+- **内置 CLI、FastAPI**
+- **支持纯 CPU 环境运行，也支持 GPU**
+- 按人类阅读顺序输出文本，适用于单栏、多栏和复杂布局
+- 保留原始文档结构，包括标题、段落、列表等
+- 提取图像、图像描述、表格、表格标题和脚注
+- 自动识别文档中的公式并转换为 LaTeX 格式
+- 自动识别文档中的表格并转换为 HTML 格式
 
 
-# Insduction
+# 介绍
 
-## Installation
+## 安装
 
 ```bash
 pip install anyparse
 
-# or
+# 或者
 
 pip install -e .
 ```
 
-## Usage
+## 使用方法
 
-please download `config/config.yaml` into your project directory.
+请将 `config/config.yaml` 下载到您的项目目录中。
 
-### Download Models
+### 下载模型
 
 ```bash
-# use modelscope (default)
+# 使用 ModelScope（默认）
 export ANYPARSE_MODEL_MIRROR="modelscope"
 
-# use huggingface
+# 使用 HuggingFace
 export ANYPARSE_MODEL_MIRROR="huggingface"
 
-# download models
+# 下载模型
 anyparse-cli download --config config/config.yaml --model
 ```
 
-### Models Hub
-- [AnyParse Models Hub ModelScope](https://www.modelscope.cn/models/anyforge/anyparse-models-hub)
-- [AnyParse Models Hub HuggingFace](https://huggingface.co/anyforge/anyparse-models-hub)
+### 模型仓库
+
+- [AnyParse 模型仓库 ModelScope](https://www.modelscope.cn/models/anyforge/anyparse-models-hub)
+- [AnyParse 模型仓库 HuggingFace](https://huggingface.co/anyforge/anyparse-models-hub)
 
 
 ### Python
 
 ```python
-# Sync
+# 同步调用
 from anyparse import AnyParser
 
 model = AnyParser(config="config/config.yaml")
 res = model.invoke(file = "/path/to/your_file")
 
 
-
-# or Async
+# 或者异步调用
 from anyparse import AsyncAnyParser
 
 model = AsyncAnyParser(config="config/config.yaml")
 res = await model.ainvoke(file = "/path/to/your_file")
 ```
 
-### CLI
+### CLI 命令行
 
 ```bash
-# help
-
+# 查看帮助
 anyparse-cli --help
 
-# parse file
+# 解析文件
 anyparse-cli parse --config config/config.yaml --file /path/to/your_file
 
-# start api server
+# 启动 API 服务器
 anyparse-cli api --config config/config.yaml
 
-# see allowed file types
+# 查看支持的文件类型
 anyparse-cli allow --config config/config.yaml
 
-# see commands help
+# 查看命令帮助
 anyparse-cli [COMMAND] --help
 ```
 
 ### API
 
-- start api server
+- 启动 API 服务器
 
 ```bash
-# start fastapi server and openai proxy
-## use restful api or openai client call
+# 启动 FastAPI 服务器和 OpenAI 代理
+## 使用 RESTful API 或 OpenAI 客户端调用
 anyparse-cli api --config config/config.yaml --host 0.0.0.0 --port 18007 --seckey 'your_custom_secret_key'
 ```
 
-- call api
+- 调用 API
 
 ```python
-# openai
+# OpenAI 方式
 from openai import OpenAI
 
 client = OpenAI(
     base_url = "http://localhost:18007/anyparse/openai/v1",
     api_key = "your_custom_secret_key",
 )
-## get model id and allowed file types
+## 获取模型 ID 和支持的文件类型
 print(client.models.list())
 
 
-
-## parse file
+## 解析文件
 import base64
 
 with open("1.pdf", "r", encoding="utf-8") as f:
@@ -159,7 +157,7 @@ response = client.chat.completions.create(
                 }
             ]
         }
-    ],  # data:application/pdf;base64 prefix follow: client.models.list().data[0].allow_mimetypes
+    ],  # data:application/pdf;base64 前缀参考: client.models.list().data[0].allow_mimetypes
     # extra_body={
     #     "runtimes_args": {
     #         "use_doc_layout": True
@@ -170,8 +168,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 
 
-
-# or restful
+# 或者 RESTful 方式
 import requests as rq
 
 headers = {
@@ -194,25 +191,24 @@ files = {
 
 res = rq.post(url, files = files, data = args, headers = headers)
 print(res.json())
-
 ```
 
-**Details and Documentation see [docs](./docs/README.md)**
+**详细信息和文档请参见 [docs](./docs/README.md)**
 
 
-## All Thanks To Our Contributors
+## 感谢所有贡献者
 
 <a href="https://github.com/anyforge/anyparse/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=anyforge/anyparse" />
 </a>
 
 
-## License Information
+## 许可证信息
 
-This repository is licensed under the [AnyParse Open Source License](https://github.com/anyforge/anyparse/blob/main/LICENSE.md), based on Apache 2.0 with additional conditions.
+本仓库基于 Apache 2.0 许可证，并附加特定条款，完整许可证请参见 [AnyParse 开源许可证](https://github.com/anyforge/anyparse/blob/main/LICENSE.md)。
 
 
-## Acknowledgments
+## 致谢
 
 - [MinerU](https://github.com/opendatalab/MinerU)
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
@@ -220,7 +216,7 @@ This repository is licensed under the [AnyParse Open Source License](https://git
 - [pypdfium2](https://github.com/pypdfium2-team/pypdfium2)
 
 
-## Star History
+## Star 增长曲线
 
 <a href="https://www.star-history.com/?repos=anyforge%2Fanyparse&type=date&legend=top-left">
  <picture>

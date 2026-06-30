@@ -1,0 +1,227 @@
+product_name: "anyparse"
+
+model_id: "${product_name}"
+
+modelapi:
+    prefix: "/${product_name}"
+    host: ${oc.env:api_host, "0.0.0.0"}
+    port: ${oc.env:api_port, "18007"}
+    path:
+        filetypes: "/filetypes/v1"
+        invoke: "/invoke/v1"
+        openai_model_list: "/openai/v1/models"
+        openai_create_file: "/openai/v1/files"
+        openai_retrieve_file: "/openai/v1/files"
+        openai_content_file: "/openai/v1/files"
+        openai_delete_file: "/openai/v1/files"
+        openai_chat_completions: "/openai/v1/chat/completions"
+        openai_responses: "/openai/v1/responses"
+
+auths:
+    # api key
+    secret_key: ${oc.env:api_secret_key, "sk_6c5aa04e523de79518620095a0e2f7bf"}
+
+filetypes: 
+    text: ['txt']
+    html: ['htm','html','xhtml','shtml']
+    markdown: ['md','rst']
+    image: ['png', 'jpeg', 'jpg']
+    pdf: ['pdf']
+    epub: ['epub']
+    office: ['docx','pptx','xlsx']
+    csv: ['tsv','csv']
+    ipynb: ['ipynb']
+    email: ['eml']
+
+mimetypes:
+    txt: "data:text/plain;base64,"
+    htm: "data:text/html;base64,"
+    html: "data:text/html;base64,"
+    xhtml: "data:text/html;base64,"
+    shtml: "data:text/html;base64,"
+    md: "data:text/markdown;base64,"
+    rst: "data:text/rst;base64,"
+    png: "data:image/png;base64,"
+    jpeg: "data:image/jpeg;base64,"
+    jpg: "data:image/jpeg;base64,"
+    webp: "data:image/webp;base64,"
+    pdf: "data:application/pdf;base64,"
+    epub: "data:application/epub;base64,"
+    docx: "data:application/docx;base64,"
+    pptx: "data:application/pptx;base64,"
+    xlsx: "data:application/xlsx;base64,"
+    tsv: "data:text/csv;base64,"
+    csv: "data:text/csv;base64,"
+    ipynb: "data:application/ipynb;base64,"
+    eml: "data:message/eml;base64,"
+    wav: "data:audio/wav;base64,"
+    mp3: "data:audio/mpeg;base64,"
+    aac: "data:audio/aac;base64,"
+    flac: "data:audio/flac;base64,"
+    mp4: "data:video/mp4;base64,"
+    mov: "data:video/mov;base64,"
+    mkv: "data:video/mkv;base64,"
+    webm: "data:video/webm;base64,"
+    avi: "data:video/avi;base64,"
+
+anyparse:
+    cache_dir: "~/.cache/anyparse"
+    autocal_md5: false
+    autodetect_encoding: true
+    ### image and pdf
+    use_doc_cls: false
+    use_doc_rectifier: false
+    use_doc_layout: true
+    doc_layout_image_min_size: 500
+    use_image_resize: false
+    image_batch_size: 1
+    ocr_batch_size: 1
+
+    text_encoding: "utf-8"
+    table_chunk_size: null
+    dpi: 200
+    verbose: true
+    stream: false
+    
+    ### docx
+    docx_extract_headers_footers: true
+    docx_extract_images: true
+
+    ### pptx
+    pptx_extract_images: true
+
+    ### xlsx
+    excel_max_rows: null  # unused
+    excel_extract_images: true
+
+    ### doc ori cls
+    doc_cls:
+        batch_size: 1
+        model_path: "~/.cache/anyparse/models/pp_lcnet_x1_0_doc_ori"
+        dtype: "auto"
+        device_map: "auto"
+
+    ## uvdoc
+    doc_rectifier:
+        batch_size: 1
+        model_path: "~/.cache/anyparse/models/pp_uvdoc"
+        dtype: "auto"
+        device_map: "auto"
+
+    ### doc layout
+    layout:
+        model_path: "~/.cache/anyparse/models/ppdoclayout-v3"
+        threshold: 0.3
+        batch_size: 1
+        dtype: "auto"
+        device_map: "auto"
+        layout_nms: true
+
+    vlm:
+        model_type: "paddleocrvl" # paddleocr, glmocr_v1, paddleocrvl, vllm
+        
+        paddleocr:
+            model_class: "PaddleOCRClient.PPOCRV6"
+            model_path: "~/.cache/anyparse/models/paddleocrv6-small"
+            batch_size: 6
+            dtype: 'auto'
+            device_map: 'auto'
+
+        glmocr_v1:
+            model_class: "GlmOCRClient.GLMOCRV1"
+            model_path: "~/.cache/anyparse/models/glmocr-v1"
+            batch_size: 1
+            max_new_tokens: 8192
+            dtype: "auto"
+            device_map: "auto"
+            min_pixels: 12544 # 112 * 112
+            max_pixels: 71372800 # 14 * 14 * 4 * 1280  
+
+        paddleocrvl:
+            model_class: "PaddleOCRVLClient.PPOCRVLClient"
+            model_path: "~/.cache/anyparse/models/paddleocrvl-v1.6"
+            batch_size: 1,
+            max_new_tokens: 16384
+            dtype: "auto"
+            device_map: "auto"  
+            attn_implementation: null  
+            truncate_content: true
+            truncate_content_list: [5000, 50] 
+        
+        vllm: # paddlocrvl-1.6 openai server
+            model_class: "OpenAIClient.OpenAIClient"
+            base_url: "http://localhost:18003/v1"
+            api_key: "sk-123456"
+            model: "PaddleOCR-VL-1.6"
+            stream: false
+            timeout: 1800.0
+            max_retries: 2
+            batch_size: 8
+            max_new_tokens: 8192
+            task_prompt_map:
+                abstract: "OCR:"
+                algorithm: "OCR:"
+                content: "OCR:"
+                doc_title: "OCR:"
+                figure_title: "OCR:"
+                paragraph_title: "OCR:"
+                reference_content: "OCR:"
+                text: "OCR:"
+                vertical_text: "OCR:"
+                vision_footnote: "OCR:"
+                seal: "OCR:"
+                formula_number: "OCR:"
+                header: "OCR:"
+                footer: "OCR:"
+                number: "OCR:"
+                footnote: "OCR:"
+                aside_text: "OCR:"
+                reference: "OCR:"
+                footer_image: "OCR:"
+                header_image: "OCR:"
+                image: "OCR:"
+                table: "Table Recognition:"
+                display_formula: "Formula Recognition:"
+                inline_formula: "Formula Recognition:"
+                chart: "Chart Recognition:"
+            client_args:
+            call_args:
+            prompt_template: >-
+                [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "image_url", 
+                                "image_url": {
+                                    "url": "{{ data_url }}"
+                                }
+                            },
+                            {
+                                "type": "text", 
+                                "text": "{{ prompt }}"
+                            }
+                        ]
+                    }
+                ]
+
+    # converters_models:
+    #     - name: "markdown"
+    #       model_class: "mkd.MkdConverter"
+        
+logger:
+  type: "loguru"
+  filename: ./logs/${product_name}.log
+  level: "DEBUG"
+  loguru:
+      encoding: "utf-8"
+      mode: "a+"
+      rotation: "00:00"
+      retention: "30 days"
+      colorize: false
+      enqueue: true
+      backtrace: true
+      diagnose: true
+      compression: null
+      strformat: "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | <cyan>{process}</cyan>:<cyan>{thread}</cyan> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> | <level>{message}</level>"
+      
