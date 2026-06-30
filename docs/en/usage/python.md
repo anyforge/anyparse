@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-pip install anyparse
+pip install anyparse-python
 
 # or
 

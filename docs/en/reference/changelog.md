@@ -6,7 +6,7 @@ This document records the release history of AnyParse, including major capabilit
 
 ## 1.1 Series Versions
 
-### 1.1.1 (2026/07/01)
+### 1.1.2 (2026/07/01)
 
 - pdf documents: add support for .pdf
 - office documents: add support for .docx, .pptx, .xlsx

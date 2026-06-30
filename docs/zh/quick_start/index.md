@@ -1,7 +1,7 @@
 ## 安装
 
 ```bash
-pip install anyparse
+pip install anyparse-python
 
 # 或者
 

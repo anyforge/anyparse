@@ -3,7 +3,7 @@ requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "anyparse"
+name = "anyparse-python"
 dynamic = ["version"]
 license = "LicenseRef-AnyParse-Open-Source-License"
 license-files = ["LICENSE.md"]
@@ -91,7 +91,8 @@ dependencies = [
 
 [project.urls]
 homepage = "https://github.com/anyforge/anyparse"
-
+documentation = "https://anyforge.github.io/anyparse/"
+repository = "https://github.com/anyforge/anyparse"
 
 [project.scripts]
 anyparse-cli = "anyparse.clis.main:anyparse_cli_main"
