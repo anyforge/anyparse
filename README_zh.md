@@ -1,12 +1,16 @@
 <p align="center">
   <img src="./docs/images/logo.png" style="width: 500px;" alt="Logo">
 </p>
-<a href="https://www.modelscope.cn/models/anyforge/anyparse-models-hub" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%E9%AD%94%E6%90%AD-ModelScope-blue"></a>
-<a href="https://huggingface.co/anyforge/anyparse-models-hub" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97-HuggingFace-blue"></a>
-<a href=""><img src="https://img.shields.io/badge/Python->=3.10-aff.svg"></a>
 
-[English](README.md) | [简体中文](README_zh.md)
+<p align="center">
+    <a href="https://www.modelscope.cn/models/anyforge/anyparse-models-hub" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%E9%AD%94%E6%90%AD-ModelScope-blue"></a>
+    <a href="https://huggingface.co/anyforge/anyparse-models-hub" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97-HuggingFace-blue"></a>
+    <a href=""><img src="https://img.shields.io/badge/Python->=3.10-aff.svg"></a>
+</p>
 
+<p align="center">
+  <a href="README.md">English</a> | <a href="README_zh.md">简体中文</a>
+</p>
 # AnyParse
 
 **AnyParse** 是一个功能强大的多模态文档解析与理解引擎，旨在将复杂文件无缝转换为结构化的 Markdown 和 JSON 格式。无论是基础文本处理、专业文档转换，还是先进的视觉语言模型（VLM）和 OCR 识别，AnyParse 都能提供全面的一站式解决方案。
