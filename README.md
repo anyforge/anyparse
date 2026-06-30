@@ -5,7 +5,9 @@
 <a href="https://huggingface.co/anyforge/anyparse-models-hub" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97-HuggingFace-blue"></a>
 <a href=""><img src="https://img.shields.io/badge/Python->=3.10-aff.svg"></a>
 
-[English](README.md) | [简体中文](README_zh.md)
+<p align="center">
+  <a href="README.md">English</a> | <a href="README_zh.md">简体中文</a>
+</p>
 
 # AnyParse
 
