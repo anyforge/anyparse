@@ -50,7 +50,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: anyforge/anyparse
+      link: https://github.com/anyforge/anyparse
       name: GitHub
     - icon: material/email
       link: mailto:anyforge@163.com
