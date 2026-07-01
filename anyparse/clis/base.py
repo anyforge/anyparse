@@ -46,7 +46,7 @@ class BaseCLI(ABC):
 
     def _show_logo(self):
         """展示启动 Logo"""
-        ascii_text = Text(text=self.logo, style="bold cyan")
+        ascii_text = Text(text=self.logo, style="bold dark_cyan")
         self.console.print(ascii_text)
     
     def show_version(self):
