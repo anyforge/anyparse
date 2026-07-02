@@ -69,6 +69,7 @@ nav:
       - Python API: usage/python.md
       - CLI Tools: usage/cli_tools.md
       - API & OpenAI: usage/apis.md
+      - Skills: usage/skills.md
     - Reference:
       - Reference: reference/index.md
       - Changelog: reference/changelog.md
