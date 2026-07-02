@@ -196,7 +196,7 @@ print(res.json())
 
 ```
 
-- **call api by skills: see skills folder**
+- **call api by skills: [see skills folder](./skills)**
 
 **Details and Documentation see [docs](https://anyforge.github.io/anyparse/)**
 
