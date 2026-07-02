@@ -8,6 +8,8 @@ pip install anyparse-python
 pip install -e .
 ```
 
+**anyparse all models infer by transformers+pytorch, if you want to use gpu, please install pytorch+cuda**
+
 ## Usage
 
 please download `config/config.yaml` into your project directory.

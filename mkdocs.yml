@@ -82,6 +82,7 @@ nav:
     - Python API: usage/python.md
     - CLI Tools: usage/cli_tools.md
     - API & OpenAI: usage/apis.md
+    - Skills: usage/skills.md
   - Reference:
     - Reference: reference/index.md
     - Changelog: reference/changelog.md
@@ -111,6 +112,7 @@ plugins:
             Python API: Python模块
             CLI Tools: 命令行工具
             API & OpenAI: 接口和OpenAI兼容
+            Skills: 技能Skills
             FAQ: 常见问题解答
             Reference: 参考资料
             Changelog: 更新日志

@@ -8,6 +8,8 @@ pip install anyparse-python
 pip install -e .
 ```
 
+**anyparse所有模型都是通过 transformers+pytorch 推理, 如果您想使用gpu, 请安装 pytorch+cuda**
+
 ## 使用方法
 
 请先下载 `config/config.yaml` 文件到你的项目目录。
