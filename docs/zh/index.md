@@ -9,6 +9,7 @@
     <a href="https://pypi.org/project/anyparse-python/"><img src="https://img.shields.io/pypi/v/anyparse-python"></a>
     <a href="https://pypi.org/project/anyparse-python/"><img src="https://img.shields.io/pypi/pyversions/anyparse-python"></a>
     <a href="https://pypi.org/project/anyparse-python/"><img src="https://static.pepy.tech/badge/anyparse-python"></a>
+    <a href="https://deepwiki.com/anyforge/anyparse/"><img src="https://deepwiki.com/badge.svg"></a>
 </p>
 
 # AnyParse
