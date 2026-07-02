@@ -11,6 +11,7 @@
 <p align="center">
   <a href="README.md">English</a> | <a href="README_zh.md">简体中文</a>
 </p>
+
 # AnyParse
 
 **AnyParse** 是一个功能强大的多模态文档解析与理解引擎，旨在将复杂文件无缝转换为结构化的 Markdown 和 JSON 格式。无论是基础文本处理、专业文档转换，还是先进的视觉语言模型（VLM）和 OCR 识别，AnyParse 都能提供全面的一站式解决方案。
