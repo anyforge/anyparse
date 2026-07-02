@@ -36,6 +36,13 @@
 - 自动识别文档中的公式并转换为 LaTeX 格式
 - 自动识别文档中的表格并转换为 HTML 格式
 
+### 资源
+
+- **docs: [AnyParse docs](https://anyforge.github.io/anyparse)**
+- **pypi: [anyparse-python](https://pypi.org/project/anyparse-python/)**
+- **[ModelScope Skills](https://www.modelscope.cn/skills/anyforge/anyparse-skill)**
+- **[SkillHub](https://skillhub.cn/skills/anyparse-skill)**
+- **[ClawHub](https://clawhub.ai/anyforge/skills/anyparse-skill)**
 
 # 介绍
 

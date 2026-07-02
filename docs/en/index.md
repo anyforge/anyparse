@@ -33,6 +33,13 @@
 - Automatically identify and convert formulas in documents to LaTeX format
 - Automatically identify and convert tables in documents to HTML format
 
+### resources
+
+- **docs: [AnyParse docs](https://anyforge.github.io/anyparse)**
+- **pypi: [anyparse-python](https://pypi.org/project/anyparse-python/)**
+- **[ModelScope Skills](https://www.modelscope.cn/skills/anyforge/anyparse-skill)**
+- **[SkillHub](https://skillhub.cn/skills/anyparse-skill)**
+- **[ClawHub](https://clawhub.ai/anyforge/skills/anyparse-skill)**
 
 ## All Thanks To Our Contributors
 
