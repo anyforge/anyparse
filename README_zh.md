@@ -110,7 +110,7 @@ anyparse-cli [COMMAND] --help
 
 ### API
 
-- 启动 API 服务器
+- **启动 API 服务器**
 
 ```bash
 # 启动 FastAPI 服务器和 OpenAI 代理
@@ -118,7 +118,7 @@ anyparse-cli [COMMAND] --help
 anyparse-cli api --config config/config.yaml --host 0.0.0.0 --port 18007 --seckey 'your_custom_secret_key'
 ```
 
-- 调用 API
+- **调用 API**
 
 ```python
 # OpenAI 方式
@@ -190,6 +190,8 @@ files = {
 res = rq.post(url, files = files, data = args, headers = headers)
 print(res.json())
 ```
+
+- **call api by skills: [see skills folder](./skills)**
 
 **详细信息和文档请参见 [docs](https://anyforge.github.io/anyparse/)**
 
