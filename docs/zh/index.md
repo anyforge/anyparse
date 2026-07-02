@@ -6,6 +6,9 @@
     <a href="https://www.modelscope.cn/models/anyforge/anyparse-models-hub" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%E9%AD%94%E6%90%AD-ModelScope-blue"></a>
     <a href="https://huggingface.co/anyforge/anyparse-models-hub" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97-HuggingFace-blue"></a>
     <a href=""><img src="https://img.shields.io/badge/Python->=3.10-aff.svg"></a>
+    <a href="https://pypi.org/project/anyparse-python/"><img src="https://img.shields.io/pypi/v/anyparse-python"></a>
+    <a href="https://pypi.org/project/anyparse-python/"><img src="https://img.shields.io/pypi/pyversions/anyparse-python"></a>
+    <a href="https://pypi.org/project/anyparse-python/"><img src="https://static.pepy.tech/badge/anyparse-python"></a>
 </p>
 
 # AnyParse
