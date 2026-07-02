@@ -112,7 +112,7 @@ anyparse-cli [COMMAND] --help
 
 ### API
 
-- start api server
+- **start api server**
 
 ```bash
 # start fastapi server and openai proxy
@@ -120,7 +120,7 @@ anyparse-cli [COMMAND] --help
 anyparse-cli api --config config/config.yaml --host 0.0.0.0 --port 18007 --seckey 'your_custom_secret_key'
 ```
 
-- call api
+- **call api**
 
 ```python
 # openai
@@ -195,6 +195,8 @@ res = rq.post(url, files = files, data = args, headers = headers)
 print(res.json())
 
 ```
+
+- **call api by skills: see skills folder**
 
 **Details and Documentation see [docs](https://anyforge.github.io/anyparse/)**
 
