@@ -1,0 +1,18 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: ❓ Ask a Question
+    url: https://github.com/anyforge/anyparse/discussions/categories/q-a
+    about: Visit the community forum to ask for help, troubleshooting, and general support.
+  
+  - name: 💡 Share an Idea and Feature
+    url: https://github.com/anyforge/anyparse/discussions/categories/ideas
+    about: Discuss new features, enhancements, and future directions for the project.
+  
+  - name: 💬 General Discussion
+    url: https://github.com/anyforge/anyparse/discussions/categories/general
+    about: Chat about anything related to the project, share use cases, and connect with the community.
+  
+  - name: 📖 Read Documentation
+    url: https://anyforge.github.io/anyparse/
+    about: Find detailed instructions, tutorials, and API references in the official documentation.
