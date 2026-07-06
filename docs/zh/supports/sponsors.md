@@ -4,7 +4,7 @@
 
 维护这样一个庞大的生态系统和为项目开发新功能所需的巨大努力，只有在我们的赞助者慷慨的财务支持下才得以持续。
 
-## 支付宝或微信打赏 (Alipay reward or WeChat reward)
+## 支付宝或微信打赏
 
 <p align="left">
     <img src="https://raw.githubusercontent.com/anyforge/anyparse/main/docs/images/alipay.png" width="200">
