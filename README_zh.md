@@ -3,6 +3,9 @@
 </p>
 
 <p align="center">
+    <a href="https://clawhub.ai/anyforge/skills/anyparse-skill" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%A6%9E%20ClawHub-anyparse-f39f37"></a>
+    <a href="https://skillhub.cn/skills/anyparse-skill" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/SkillHub-anyparse-f39f37"></a>
+    <a href="https://www.modelscope.cn/skills/anyforge/anyparse-skill" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/ModelScopeSkills-anyparse-f39f37"></a>
     <a href="https://www.modelscope.cn/models/anyforge/anyparse-models-hub" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%E9%AD%94%E6%90%AD-ModelScope-blue"></a>
     <a href="https://huggingface.co/anyforge/anyparse-models-hub" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97-HuggingFace-blue"></a>
     <a href=""><img src="https://img.shields.io/badge/Python->=3.10-aff.svg"></a>
