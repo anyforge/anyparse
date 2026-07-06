@@ -231,9 +231,10 @@ As the project scales, ongoing financial support is essential to sustain its mai
 
 ### 支付宝或微信打赏 (Alipay reward or WeChat reward)
 
-<img src="./docs/images/alipay.png" width="30%" height="30%">
-
-<img src="./docs/images/wechatpay.jpg" width="30%" height="30%">
+<p align="left">
+    <img src="./docs/images/alipay.png" width="200">
+    <img src="./docs/images/wechatpay.jpg" width="200">
+</p>
 
 
 ## Commercial Support

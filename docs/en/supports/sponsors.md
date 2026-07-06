@@ -4,6 +4,7 @@ As the project scales, ongoing financial support is essential to sustain its mai
 
 ## 支付宝或微信打赏 (Alipay reward or WeChat reward)
 
-<img src="../images/alipay.png" width="30%" height="30%">
-
-<img src="../images/wechatpay.jpg" width="30%" height="30%">
+<p align="left">
+    <img src="https://github.com/anyforge/anyparse/blob/main/docs/images/alipay.png" width="200">
+    <img src="https://github.com/anyforge/anyparse/blob/main/docs/images/wechatpay.jpg" width="200">
+</p>
