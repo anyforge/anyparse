@@ -233,7 +233,7 @@ As the project scales, ongoing financial support is essential to sustain its mai
 
 <p align="left">
     <img src="./docs/images/alipay.png" width="200">
-    <img src="./docs/images/wechatpay.jpg" width="200">
+    <img src="./docs/images/wechatpay.png" width="200">
 </p>
 
 

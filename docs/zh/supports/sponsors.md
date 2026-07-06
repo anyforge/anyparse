@@ -8,5 +8,5 @@
 
 <p align="left">
     <img src="https://raw.githubusercontent.com/anyforge/anyparse/main/docs/images/alipay.png" width="200">
-    <img src="https://raw.githubusercontent.com/anyforge/anyparse/main/docs/images/wechatpay.jpg" width="200">
+    <img src="https://raw.githubusercontent.com/anyforge/anyparse/main/docs/images/wechatpay.png" width="200">
 </p>
