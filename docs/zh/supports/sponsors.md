@@ -7,6 +7,6 @@
 ## 支付宝或微信打赏 (Alipay reward or WeChat reward)
 
 <p align="left">
-    <img src="https://github.com/anyforge/anyparse/blob/main/docs/images/alipay.png?raw=true" width="200">
-    <img src="https://github.com/anyforge/anyparse/blob/main/docs/images/wechatpay.jpg?raw=true" width="200">
+    <img src="https://raw.githubusercontent.com/anyforge/anyparse/main/docs/images/alipay.png" width="200">
+    <img src="https://raw.githubusercontent.com/anyforge/anyparse/main/docs/images/wechatpay.jpg" width="200">
 </p>
