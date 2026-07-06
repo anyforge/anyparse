@@ -73,6 +73,10 @@ nav:
     - Reference:
       - Reference: reference/index.md
       - Changelog: reference/changelog.md
+    - Sponsors:
+      - Sponsors: supports/sponsors.md
+    - Commercial Support:
+      - Commercial Support: supports/commercial.md
     - FAQ:
       - FAQ: faq/index.md
   - Quick Start:
@@ -87,6 +91,10 @@ nav:
   - Reference:
     - Reference: reference/index.md
     - Changelog: reference/changelog.md
+  - Sponsors:
+    - Sponsors: supports/sponsors.md
+  - Commercial Support:
+    - Commercial Support: supports/commercial.md
   - FAQ:
     - FAQ: faq/index.md
 
@@ -116,6 +124,8 @@ plugins:
             Skills: 技能Skills
             FAQ: 常见问题解答
             Reference: 参考资料
+            Sponsors: 赞助商
+            Commercial Support: 商务支持
             Changelog: 更新日志
   - mkdocs-video
 

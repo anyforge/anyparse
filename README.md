@@ -225,6 +225,27 @@ print(res.json())
 </a>
 
 
+## Sponsors
+
+As the project scales, ongoing financial support is essential to sustain its maintenance and development. The immense effort required to maintain this extensive ecosystem and build new features is made possible only by the generous backing of our sponsors.
+
+### 支付宝或微信打赏 (Alipay reward or WeChat reward)
+
+<img src="./docs/images/alipay.png" width="30%" height="30%">
+
+<img src="./docs/images/wechatpay.jpg" width="30%" height="30%">
+
+
+## Commercial Support
+
+- **Docker Deployment**
+- **Domestic Hardware Support**
+- **Enhanced Parsing with anyparse-pro**
+- **Custom Development**
+
+**Contact us: [Email](mailto:anyforge@163.com)**
+
+
 ## License Information
 
 This repository is licensed under the [AnyParse Open Source License](https://github.com/anyforge/anyparse/blob/main/LICENSE.md), based on Apache 2.0 with additional conditions.

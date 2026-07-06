@@ -221,6 +221,29 @@ print(res.json())
 </a>
 
 
+## 赞助
+
+随着项目规模的增长，也需要有相应的资金支持才能持续项目的维护的开发。
+
+维护这样一个庞大的生态系统和为项目开发新功能所需的巨大努力，只有在我们的赞助者慷慨的财务支持下才得以持续。
+
+### 支付宝或微信打赏 (Alipay reward or WeChat reward)
+
+<img src="./docs/images/alipay.png" width="30%" height="30%">
+
+<img src="./docs/images/wechatpay.jpg" width="30%" height="30%">
+
+
+## 商业支持
+
+- **Docker部署**
+- **国产硬件支持**
+- **anyparse-pro更优的解析**
+- **定制开发**
+
+**联系我们: [邮件](mailto:anyforge@163.com)**
+
+
 ## 许可证信息
 
 本仓库基于 Apache 2.0 许可证，并附加特定条款，完整许可证请参见 [AnyParse 开源许可证](https://github.com/anyforge/anyparse/blob/main/LICENSE.md)。
